@@ -1,0 +1,19 @@
+
+.castList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+.castListItem {
+    list-style-type: none;
+    text-align: center;
+    flex-basis: calc(100% / 6 - 25px);
+}
+
+.castNames{
+    margin-top: 5px;
+    color: rgb(39, 39, 39);
+}

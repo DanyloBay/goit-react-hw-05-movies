@@ -10,12 +10,15 @@ const SharedLayout = () => {
         <nav className={css.headerNav}>
           <ul className={css.headerList}>
             <li>
-              <NavLink className={css.headerItems} to={'/'}>
+              <NavLink className={`${css.headerItems} ${css.active}`} to={'/'}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className={css.headerItems} to={'/movies'}>
+              <NavLink
+                className={`${css.headerItems} ${css.active}`}
+                to={'/movies'}
+              >
                 Movies
               </NavLink>
             </li>

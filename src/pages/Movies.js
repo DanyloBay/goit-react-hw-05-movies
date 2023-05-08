@@ -2,6 +2,7 @@ import fetchSearchMovies from 'API/get_search';
 import { useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import css from './Movies.module.css';
+import logo from '../images/logo.png';
 
 const Movies = () => {
   const [serachMovies, setSerachMovies] = useState([]);
@@ -27,11 +28,28 @@ const Movies = () => {
           Search
         </button>
       </form>
-      <ul>
+      <ul className={css.movieList}>
         {serachMovies.map(name => (
-          <li key={name.id}>
-            <Link key={name.id} to={`${name.id}`} state={{ from: location }}>
-              {name.original_title}
+          <li className={css.movieItems} key={name.id}>
+            <Link
+              className={css.movieLink}
+              key={name.id}
+              to={`${name.id}`}
+              state={{ from: location }}
+            >
+              <div className={css.movieLinkItem}>
+                <img
+                  width={300}
+                  height={400}
+                  src={
+                    name.poster_path
+                      ? `https://image.tmdb.org/t/p/w500/${name.poster_path}`
+                      : logo
+                  }
+                  alt={name.original_title}
+                />
+                {name.original_title}
+              </div>
             </Link>
           </li>
         ))}

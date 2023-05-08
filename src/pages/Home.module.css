@@ -7,12 +7,27 @@
 .mainList{
     padding: 0;
     margin: 0;
+    margin-top: 50px;
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .mainItems{
-    color: rgb(39, 39, 39);
-    text-decoration: none;
+    flex-basis: calc(100% / 3 - 25px);
     font-size: 15px;
     font-weight: 600;
+}
+
+.mainLink{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+}
+
+.mainLinkItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }

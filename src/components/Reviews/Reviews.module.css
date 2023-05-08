@@ -1,0 +1,19 @@
+.reviewList{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.reviewItem{
+    color: rgb(39, 39, 39);
+}
+.reviewItem:not(:last-child){
+    margin-bottom: 10px;
+}
+.reviewDesc{
+    margin-top: 10px;
+}
+
+.commentOwner{
+    font-weight: bold;
+    font-size: 20px;
+}
