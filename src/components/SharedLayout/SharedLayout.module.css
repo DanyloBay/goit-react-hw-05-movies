@@ -1,0 +1,39 @@
+.header{
+    padding: 30px 50px;
+    background-image: linear-gradient(to right, rgb(65, 162, 232), rgb(12, 23, 122));
+}
+
+.headerNav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerIcon{
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.headerList
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 25px;
+}
+
+.headerItems{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.headerItems:active{
+    color: white;
+}

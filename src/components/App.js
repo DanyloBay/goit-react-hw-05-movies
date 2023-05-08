@@ -2,9 +2,9 @@ import Home from 'pages/Home';
 import MovieDetails from 'pages/MovieDetails';
 import Movies from 'pages/Movies';
 import { Route, Routes } from 'react-router-dom';
-import SharedLayout from './SharedLayout';
-import Cast from 'components/Cast';
-import Reviews from 'components/Reviews';
+import SharedLayout from './SharedLayout/SharedLayout';
+import Cast from 'components/Cast/Cast';
+import Reviews from 'components/Reviews/Reviews';
 
 export const App = () => {
   return (

@@ -1,0 +1,18 @@
+.mainTitle{
+    margin: 0;
+    text-align: center;
+    color: rgba(90, 88, 88, 0.848);
+}
+
+.mainList{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.mainItems{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}

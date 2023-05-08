@@ -1,0 +1,93 @@
+.detailsContainer{
+    margin-top: 25px;
+}
+
+.detailsCard{
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    color: rgb(39, 39, 39);
+}
+
+.movieOverview{
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detailsSubcard{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieOverviewSubtitles{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.movieTitle{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.movieDesc{
+    margin-top: 5px;
+}
+
+.movieGenres{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.movieGenresItems{
+    list-style-type: none;
+}
+
+.backButtonItem{
+    display: flex;
+    align-items: center;
+}
+
+.backButton {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 15px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.detailsCard {
+    margin-top: 20px;
+}
+
+.detailsList{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.detailsItem{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.detailsLink{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detailsIcon{
+    width: 20px;
+    height: 20px;
+}
