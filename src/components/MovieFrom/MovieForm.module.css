@@ -1,0 +1,21 @@
+.movieSearchForm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 3px 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.movieSearchInput {
+    padding: 5px 15px;
+    color: gray;
+}

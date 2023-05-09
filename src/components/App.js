@@ -1,6 +1,6 @@
-import Home from 'pages/Home';
-import MovieDetails from 'pages/MovieDetails';
-import Movies from 'pages/Movies';
+import Home from 'pages/Home/Home.js';
+import MovieDetails from 'pages/MovieDetails/MovieDetails.js';
+import Movies from 'pages/Movie/Movies.js';
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './SharedLayout/SharedLayout';
 import Cast from 'components/Cast/Cast';
