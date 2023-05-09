@@ -1,4 +1,4 @@
-import fetchGetMovieCredits from 'API/get_movie_credits';
+import fetchMovie from 'API/get_movie_api';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
@@ -10,9 +10,17 @@ const Cast = () => {
   const [cast, setCast] = useState([]);
   const { moviedId } = useParams();
   useEffect(() => {
-    fetchGetMovieCredits(moviedId)
-      .then(({ cast }) => setCast([...cast]))
-      .catch(error => console.log(error));
+    const fetchData = async () => {
+      try {
+        const {
+          data: { cast },
+        } = await fetchMovie(`/movie/${moviedId}/credits`);
+        setCast(cast);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchData();
   }, [moviedId]);
 
   return (

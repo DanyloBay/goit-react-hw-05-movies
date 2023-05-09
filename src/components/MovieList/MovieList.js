@@ -10,7 +10,7 @@ const MovieList = ({ movies, location }) => {
           <Link
             className={css.mainLink}
             key={movie.id}
-            to={`${movie.id}`}
+            to={`/movies/${movie.id}`}
             state={{ from: location }}
           >
             <div className={css.mainLinkItem}>

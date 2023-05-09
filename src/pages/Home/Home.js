@@ -1,8 +1,8 @@
-import fetchTrendingMovies from 'API/get_trending';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import css from './Home.module.css';
 import MovieList from 'components/MovieList/MovieList';
+import fetchMovie from 'API/get_movie_api';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +11,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { results } = await fetchTrendingMovies();
+        const {
+          data: { results },
+        } = await fetchMovie('/trending/movie/day');
         setMovies(results);
       } catch (error) {
         console.log(error.message);

@@ -1,4 +1,4 @@
-import fetchSearchMovies from 'API/get_search';
+import fetchMovie from 'API/get_movie_api';
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import MovieList from 'components/MovieList/MovieList';
@@ -17,7 +17,9 @@ const Movies = () => {
     const fetchData = async () => {
       try {
         const searchMovie = searchParams.get('query');
-        const { results } = await fetchSearchMovies(searchMovie);
+        const {
+          data: { results },
+        } = await fetchMovie(`/search/movie?query=${searchMovie}`);
         setSearchMovies([...results]);
       } catch (error) {
         console.log(error.message);

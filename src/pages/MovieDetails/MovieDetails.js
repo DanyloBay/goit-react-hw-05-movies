@@ -1,4 +1,4 @@
-import fetchGetMovie from 'API/get_movie_details';
+import fetchMovie from 'API/get_movie_api';
 import { useEffect, useRef, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { FiChevronLeft, FiChevronDown } from 'react-icons/fi';
@@ -15,9 +15,15 @@ const MovieDetails = () => {
   const backLinkLocationRef = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
-    fetchGetMovie(moviedId)
-      .then(data => setMovie(data))
-      .catch(error => console.log(error));
+    const fetchData = async () => {
+      try {
+        const { data } = await fetchMovie(`/movie/${moviedId}`);
+        setMovie(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchData();
   }, [moviedId]);
 
   return (
